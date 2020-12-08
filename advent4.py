@@ -5,7 +5,7 @@ import json
 #     valid_passports = 0
 #     passport = {}
 #     for line in passport_data:
-#         line = line.strip('\n')
+#         line = line.strip()
 #         # print(len(line))
 #         if line == "":
 #             # print(json.dumps(passport, indent=4))
@@ -28,6 +28,8 @@ import json
 #         valid_passports = valid_passports + 1
 #     # print(json.dumps(passport, indent=4))
 #     print("Number of valid passports: ", valid_passports)
+
+
 # passports = []
 # valid_passports = 0
 #
