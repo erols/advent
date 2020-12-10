@@ -2,9 +2,7 @@ with open('input10') as data:
     adapters = sorted([int(x.strip()) for x in data.readlines()])
 
 adapters.append(max(adapters)+3)
-adapters = sorted(adapters, reverse=True)
-adapters.append(0)
-adapters = sorted(adapters)
+adapters.insert(0, 0)
 
 
 def part_a():
