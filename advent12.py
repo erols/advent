@@ -8,11 +8,10 @@ with open('input12') as data:
         directions.append(direction)
 
 
-position = [0, 0, 'E']
+# position = [0, 0, 'E']
 
 
 def move(d):
-    global position
     instruction = d[0]
     distance = d[1]
     if instruction == 'N':
@@ -37,7 +36,31 @@ def move(d):
     print(position)
 
 
-for direction in directions:
-    move(direction)
-print(abs(position[0]) + abs(position[1]))
+def move_direction(m, p, w):
+    pass
+
+
+def turn(m, p, w):
+    pass
+
+
+def move_forward(m, p, w):
+    pass
+
+
+def part_b(d):
+    position = [0, 0]
+    waypoint = [1, 10]
+    for di in d:
+        if di[0] in 'NSEW':
+            e = [1, 1, -1, -1]['NSEW'.index(di[0])]
+            if di[0] in 'NS':
+                waypoint[0] = waypoint[0] + (di[1] * e)
+            elif di[0] in 'EW':
+                waypoint[1] = waypoint[1] + (di[1] * e)
+            else:
+                print("Error, direction is", di[0])
+
+
+    print(abs(position[0]) + abs(position[1]))
 
